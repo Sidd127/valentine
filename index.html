@@ -8,51 +8,84 @@
 </head>
 <body>
 
-<div class="container" id="main-page">
-    <img src="your-image.jpg" alt="My Photo" class="hero-image">
+<audio id="bg-music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
-    <h1>Will you be my Valentine Lorin?</h1>
+<div class="emoji-bg"></div>
 
+<!-- PAGE 1 -->
+<div class="container" id="page1">
+    <img src="your-image.jpg" class="hero-image">
+    <h1>Will you be my valentine Lorin?</h1>
     <button id="yes-btn">Yes</button>
     <button id="no-btn">No</button>
 </div>
 
-<div class="container hidden" id="date-page">
-    <h1>Choose our perfect date</h1>
+<!-- PAGE 2 -->
+<div class="container hidden" id="page2">
+    <h1 class="celebrate">Wohooooo!</h1>
+    <img src="second-image.jpg" class="hero-image">
+    <p>This is already my favorite answer.</p>
+    <button id="more-btn">Wait there is more</button>
+</div>
 
+<!-- PAGE 3 -->
+<div class="container hidden" id="page3">
     <form id="date-form" action="https://formspree.io/f/mnjbjekk" method="POST">
-        <input type="hidden" name="_subject" value="Valentine Date Response">
+        <input type="hidden" name="_subject" value="Valentine Response">
 
-        <label>
-            <input type="radio" name="date_choice" value="Romantic Dinner" required>
-            Romantic Dinner
-        </label><br>
+        <!-- Step 1 -->
+        <div class="step active">
+            <h2>Step 1: What would you like to eat?</h2>
+            <select name="food" required>
+                <option value="">Choose...</option>
+                <option>Italian</option>
+                <option>Chinese</option>
+                <option>Burgers</option>
+                <option>Sushi</option>
+                <option>Home cooked dinner</option>
+                <option>Surprise me</option>
+            </select>
+            <button type="button" class="next">Next</button>
+        </div>
 
-        <label>
-            <input type="radio" name="date_choice" value="Movie Night">
-            Movie Night
-        </label><br>
+        <!-- Step 2 -->
+        <div class="step">
+            <h2>Step 2: Ice Cream?</h2>
+            <select name="icecream" required>
+                <option value="">Choose...</option>
+                <option>Chocolate</option>
+                <option>Vanilla</option>
+                <option>Strawberry</option>
+                <option>Cookies & Cream</option>
+                <option>Mint</option>
+                <option>No ice cream</option>
+            </select>
+            <button type="button" class="next">Next</button>
+        </div>
 
-        <label>
-            <input type="radio" name="date_choice" value="Beach Walk">
-            Beach Walk
-        </label><br>
-
-        <label>
-            <input type="radio" name="date_choice" value="Surprise Me">
-            Surprise Me
-        </label><br><br>
-
-        <button type="submit">Submit</button>
+        <!-- Step 3 -->
+        <div class="step">
+            <h2>Step 3: Type of Date?</h2>
+            <select name="date_type" required>
+                <option value="">Choose...</option>
+                <option>Romantic candlelight dinner</option>
+                <option>Movie night</option>
+                <option>Beach walk</option>
+                <option>Long drive</option>
+                <option>Rooftop dinner</option>
+                <option>Stay in and cuddle</option>
+            </select>
+            <button type="submit">Submit</button>
+        </div>
     </form>
 
-    <div id="success-message" class="hidden">
-        <h2>I can’t wait. This is going to be special.</h2>
+    <div id="final-message" class="hidden">
+        <h2>When i come visit you, i am gonna make this reality</h2>
     </div>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
