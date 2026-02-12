@@ -32,6 +32,14 @@ noBtn.addEventListener("click", () => {
 });
 
 yesBtn.addEventListener("click", () => {
+
+    // CONFETTI
+    confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.6 }
+    });
+
     page1.classList.add("hidden");
     page2.classList.remove("hidden");
 });
@@ -73,5 +81,16 @@ form.addEventListener("submit", async function(event) {
         finalMessage.classList.remove("hidden");
     } else {
         alert("Something went wrong.");
+    }
+});
+
+// PARTICLES
+tsParticles.load("particles-js", {
+    particles: {
+        number: { value: 50 },
+        shape: { type: "char", character: { value: ["❤","💕","💖"] } },
+        size: { value: 20 },
+        move: { speed: 1 },
+        opacity: { value: 0.4 }
     }
 });
