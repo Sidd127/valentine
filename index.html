@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Be My Valentine?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="main-page">
+    <img src="your-image.jpg" alt="My Photo" class="hero-image">
+
+    <h1>Will you be my Valentine?</h1>
+
+    <button id="yes-btn">Yes</button>
+    <button id="no-btn">No</button>
+</div>
+
+<div class="container hidden" id="date-page">
+    <h1>Choose our perfect date</h1>
+
+    <form id="date-form" action="https://formspree.io/f/mnjbjekk" method="POST">
+        <input type="hidden" name="_subject" value="Valentine Date Response">
+
+        <label>
+            <input type="radio" name="date_choice" value="Romantic Dinner" required>
+            Romantic Dinner
+        </label><br>
+
+        <label>
+            <input type="radio" name="date_choice" value="Movie Night">
+            Movie Night
+        </label><br>
+
+        <label>
+            <input type="radio" name="date_choice" value="Beach Walk">
+            Beach Walk
+        </label><br>
+
+        <label>
+            <input type="radio" name="date_choice" value="Surprise Me">
+            Surprise Me
+        </label><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="success-message" class="hidden">
+        <h2>I can’t wait. This is going to be special.</h2>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
