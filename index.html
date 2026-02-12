@@ -2,17 +2,24 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Be My Valentine Lorin?</title>
+    <title>Be My Valentine?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Particles Library -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 <body>
+
+<div id="particles-js"></div>
 
 <audio id="bg-music" autoplay loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
-
-<div class="emoji-bg"></div>
 
 <!-- PAGE 1 -->
 <div class="container" id="page1">
@@ -32,7 +39,7 @@
 
 <!-- PAGE 3 -->
 <div class="container hidden" id="page3">
-    <form id="date-form" action="https://formspree.io/f/mnjbjekk" method="POST">
+    <form id="date-form" action="PASTE_YOUR_FORMSPREE_LINK_HERE" method="POST">
         <input type="hidden" name="_subject" value="Valentine Response">
 
         <!-- Step 1 -->
@@ -77,6 +84,13 @@
                 <option>Rooftop dinner</option>
                 <option>Stay in and cuddle</option>
             </select>
+
+            <br><br>
+
+            <h3>Write something for me:</h3>
+            <textarea name="custom_message" rows="4" placeholder="Type anything you want..."></textarea>
+
+            <br><br>
             <button type="submit">Submit</button>
         </div>
     </form>
