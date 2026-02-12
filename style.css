@@ -1,27 +1,32 @@
 body {
     margin: 0;
-    font-family: Arial;
-    background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
     text-align: center;
+    background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+    overflow-x: hidden;
 }
 
 .container {
-    margin-top: 50px;
+    margin-top: 60px;
+    padding: 20px;
 }
 
 .hero-image {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     margin: 10px;
     font-size: 16px;
-    border-radius: 20px;
+    border-radius: 25px;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 #yes-btn {
@@ -34,6 +39,48 @@ button {
     color: white;
 }
 
+#more-btn {
+    background-color: #ff4e73;
+    color: white;
+}
+
 .hidden {
     display: none;
+}
+
+.celebrate {
+    font-size: 40px;
+    animation: pop 0.6s ease infinite alternate;
+}
+
+@keyframes pop {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+select {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.emoji-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+        url('https://twemoji.maxcdn.com/v/latest/svg/2764.svg'),
+        url('https://twemoji.maxcdn.com/v/latest/svg/1f495.svg'),
+        url('https://twemoji.maxcdn.com/v/latest/svg/2728.svg');
+    background-repeat: repeat;
+    opacity: 0.08;
 }
